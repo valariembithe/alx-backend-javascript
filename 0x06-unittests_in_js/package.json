@@ -2,9 +2,9 @@
   "name": "unittests_in_js",
   "version": "1.0.0",
   "description": "A project for learning the basics of unittests in Node.js.",
-  "author": "",
+  "author": "Valarie Mbithe",
   "private": true,
-  "license": "",
+  "license": "MIT",
   "scripts": {
     "lint": "./node_modules/.bin/eslint",
     "lint-all": "./node_modules/.bin/eslint [0-9]*.js",
@@ -31,12 +31,12 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/valariembithe/alx-backend-javascript"
   },
   "bugs": {
-    "url": "https://github.com/B3zaleel/alx-backend-javascript/issues"
+    "url": "https://github.com/valariembithe/alx-backend-javascript/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/valariembithe/alx-backend-javascript/blob/main/0x06-unittests_in_js/README.md",
   "engines": {
     "node": "16.x",
     "npm": "8.x",
