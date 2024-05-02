@@ -1,12 +1,12 @@
 {
   "name": "8-api",
   "version": "1.0.0",
-  "description": "8-api",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha"
   },
-  "author": "Valarie Mbithe",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
