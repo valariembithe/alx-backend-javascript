@@ -3,14 +3,14 @@ const http = require('http');
 
 const PORT = 1245;
 const HOST = 'localhost';
-const app = http.createServer();
-const DB_FILE = process.argv > 2 ? process.argv[2] : '';
+const app = http.createServer()
+const DB_FILE = process.argv.length > 2 ? process.argv[2] : '';
 
 /**
  * Counts and prints people according to fields
  */
 
-const countStudents = (dataPath) => new Promise ((resolve, reject) => {
+const countStudents = (dataPath) => new Promise((resolve, reject) => {
   if (!dataPath) {
     reject(new Error('Cannot load the database'));
   }
@@ -29,13 +29,12 @@ const countStudents = (dataPath) => new Promise ((resolve, reject) => {
           dbFieldNames.length - 1,
         );
 
-        for (const line in fileLines.slice(1)) {
+        for (const line of fileLines.slice(1)) {
           const studentRecord = line.split(',');
-          const studentPropValues = dbFieldNames.slice(
+          const studentPropValues = studentRecord.slice(
             0,
-            dbFieldNames.length - 1
+            studentRecord.length - 1,
           );
-
           const field = studentRecord[studentRecord.length - 1];
           if (!Object.keys(studentGroups).includes(field)) {
             studentGroups[field] = [];
@@ -51,7 +50,7 @@ const countStudents = (dataPath) => new Promise ((resolve, reject) => {
           (pre, cur) => (pre || []).length + cur.length,
         );
         reportParts.push(`Number of students: ${totalStudents}`);
-        for (const[field, group] of Object.entries(studentGroups)) {
+        for (const [field, group] of Object.entries(studentGroups)) {
           reportParts.push([
             `Number of students in ${field}: ${group.length}.`,
             'List:',
