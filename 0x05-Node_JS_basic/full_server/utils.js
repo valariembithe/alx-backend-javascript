@@ -2,7 +2,7 @@ import fs from 'fs';
 
 /**
  * Reads the data of students in a CSV data file.
- * @param {String} dataPath The path to the CSV data
+ * @param {String} dataPath The path to the CSV data file
  * @returns {Promise<{
  *   String: {firstname: String, lastname: String, age: number}[]
  * }>}
